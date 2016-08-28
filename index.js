@@ -1,6 +1,6 @@
 // CONFIG ////////////////
 var initialBetAmount = 1;
-var mode = 'martingale'; // can be 'martingale' or 'anti-martingale' (WAT? https://en.wikipedia.org/wiki/Martingale_(betting_system) )
+var mode = 'martingale'; // 'martingale' or 'anti-martingale'
 var betColor = 'red'; // can be 'red' or 'black'
 //////////////////////////
 
@@ -59,7 +59,7 @@ function placeBet() {
 function getStatus() {
     var a = _status.text();
 
-    if (hasSubString(a, "Rolling in")) { 
+    if (hasSubString(a, "Rolling in")) {
         return "waiting";
     }
 
@@ -94,8 +94,8 @@ function wonLastRoll() {
     // vars
 var _currentBetAmount = initialBetAmount,
     _currentRollNbr = 1,
-    _lastStatus, 
-    _lastBetColor, 
+    _lastStatus,
+    _lastBetColor,
     _lastRollColor,
 
     // elements
